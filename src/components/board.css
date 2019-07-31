@@ -1,0 +1,32 @@
+.table {
+	display: flex;
+	flex-wrap: wrap;
+	width: 306px;
+	justify-content: center;
+	background: white;
+	padding: 15px 0;
+	border-radius: 10px;
+}
+
+.square {
+	width: 80px;
+	height: 80px;
+	border: none;
+	background-color: #9b8398;
+	margin: 5px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4rem;
+	cursor: pointer;
+	color: white;
+}
+
+.square:hover {
+	background: #ca7529;
+}
+
+.noShow {
+	display: none;
+}
