@@ -14,6 +14,7 @@ class board extends Component {
 	};
 	handleClick = event => {
 		if (event.target.innerText === "") {
+			this.gameState.totalMoves++
 			this.gameState.board[event.target.dataset.square] = this.state.turn;
 			event.target.innerText = this.state.turn;
 			this.setState({
@@ -31,7 +32,9 @@ class board extends Component {
 				winnerLine: "Match won by X",
 				noShow: "noShow"
 			});
-		} else if (result === "O") {
+		}
+
+		if (result === "O") {
 			this.setState({
 				gameEnded: true,
 				winner: "O",
@@ -69,6 +72,7 @@ class board extends Component {
 			) {
 				return board[moves[i][0]];
 			}
+			console.log(this.gameState.totalMoves)
 
 			if (this.gameState.totalMoves === 9) {
 				return "draw";
